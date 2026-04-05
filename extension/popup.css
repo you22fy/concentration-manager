@@ -100,7 +100,7 @@ body {
 .domain-input {
   display: flex;
   gap: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .domain-input input {
@@ -120,6 +120,12 @@ body {
 
 .domain-input input::placeholder {
   color: #4a5568;
+}
+
+.input-hint {
+  font-size: 11px;
+  color: #4a5568;
+  margin-bottom: 8px;
 }
 
 .btn-add {
@@ -147,16 +153,32 @@ body {
 .domain-list li {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 6px 10px;
   border-radius: 6px;
   font-size: 13px;
   margin-bottom: 4px;
   background: rgba(255, 255, 255, 0.04);
+  gap: 6px;
 }
 
 .domain-list li .domain-name {
   color: #e0e0e0;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.domain-list li .domain-name.temp-allowed {
+  text-decoration: line-through;
+  color: #8892b0;
+}
+
+.domain-list li .btn-actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
 }
 
 .domain-list li .btn-remove {
@@ -172,6 +194,50 @@ body {
 
 .domain-list li .btn-remove:hover {
   opacity: 1;
+}
+
+.domain-list li .btn-temp-allow {
+  background: none;
+  border: 1px solid rgba(241, 196, 15, 0.3);
+  border-radius: 4px;
+  color: #f1c40f;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 2px 6px;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+.domain-list li .btn-temp-allow:hover {
+  opacity: 1;
+  background: rgba(241, 196, 15, 0.1);
+}
+
+.domain-list li .btn-revoke {
+  background: none;
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  border-radius: 4px;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 2px 6px;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+.domain-list li .btn-revoke:hover {
+  opacity: 1;
+  background: rgba(231, 76, 60, 0.1);
+}
+
+.temp-allowed-badge {
+  font-size: 10px;
+  color: #f1c40f;
+  background: rgba(241, 196, 15, 0.1);
+  border: 1px solid rgba(241, 196, 15, 0.2);
+  border-radius: 4px;
+  padding: 1px 5px;
+  flex-shrink: 0;
 }
 
 .history-list {

@@ -21,10 +21,26 @@
   <div class="section">
     <h2>ブロックするドメイン</h2>
     <div class="domain-input">
-      <input type="text" id="domainInput" placeholder="例: twitter.com">
+      <input type="text" id="domainInput" placeholder="例: twitter.com, facebook.com">
       <button id="addDomainBtn" class="btn-add">追加</button>
     </div>
+    <p class="input-hint">カンマ・スペース区切りで一括追加可</p>
     <ul id="domainList" class="domain-list"></ul>
+  </div>
+
+  <div class="section">
+    <h2>除外するサブドメイン</h2>
+    <div class="domain-input">
+      <input type="text" id="allowedInput" placeholder="例: music.youtube.com">
+      <button id="addAllowedBtn" class="btn-add">追加</button>
+    </div>
+    <p class="input-hint">ブロック対象から除外するサブドメイン</p>
+    <ul id="allowedList" class="domain-list"></ul>
+  </div>
+
+  <div class="section" id="tempAllowedSection" style="display: none;">
+    <h2>一時許可中</h2>
+    <ul id="tempAllowedList" class="domain-list"></ul>
   </div>
 
   <div class="section">

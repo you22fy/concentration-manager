@@ -24,3 +24,19 @@ function updateTimer() {
 
 updateTimer();
 setInterval(updateTimer, 1000);
+
+// Temp allow button
+document.getElementById("tempAllowBtn").addEventListener("click", () => {
+  if (!domain) return;
+
+  chrome.storage.local.get(["tempAllowedDomains"], (data) => {
+    const tempAllowed = data.tempAllowedDomains || [];
+    if (!tempAllowed.includes(domain)) {
+      tempAllowed.push(domain);
+    }
+    chrome.storage.local.set({ tempAllowedDomains: tempAllowed }, () => {
+      // Navigate to the originally blocked site
+      window.location.href = "https://" + domain;
+    });
+  });
+});
