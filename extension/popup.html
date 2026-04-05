@@ -7,34 +7,34 @@
 </head>
 <body>
   <div class="header">
-    <h1>🎯 集中モード</h1>
+    <span class="header-title">集中モード</span>
   </div>
 
   <div class="toggle-section">
     <button id="toggleBtn" class="toggle-btn off">OFF</button>
     <div class="timer" id="timer" style="display: none;">
-      <span class="timer-label">経過時間</span>
+      <span class="timer-label">経過</span>
       <span class="timer-value" id="timerValue">00:00:00</span>
     </div>
   </div>
 
   <div class="section">
-    <h2>ブロックするドメイン</h2>
+    <h2>ブロックリスト</h2>
     <div class="domain-input">
-      <input type="text" id="domainInput" placeholder="例: twitter.com, facebook.com">
+      <input type="text" id="domainInput" placeholder="例: example.com">
       <button id="addDomainBtn" class="btn-add">追加</button>
     </div>
-    <p class="input-hint">カンマ・スペース区切りで一括追加可</p>
+    <p class="input-hint">カンマ・スペース区切りで一括追加できます</p>
     <ul id="domainList" class="domain-list"></ul>
   </div>
 
   <div class="section">
-    <h2>除外するサブドメイン</h2>
+    <h2>ホワイトリスト</h2>
+    <p class="section-desc">一部のサブドメインをホワイトリストとして登録することで、ブロック対象から除外できます。</p>
     <div class="domain-input">
-      <input type="text" id="allowedInput" placeholder="例: music.youtube.com">
+      <input type="text" id="allowedInput" placeholder="例: white.example.com">
       <button id="addAllowedBtn" class="btn-add">追加</button>
     </div>
-    <p class="input-hint">ブロック対象から除外するサブドメイン</p>
     <ul id="allowedList" class="domain-list"></ul>
   </div>
 
@@ -44,7 +44,7 @@
   </div>
 
   <div class="section">
-    <h2>セッション履歴</h2>
+    <h2>履歴</h2>
     <ul id="historyList" class="history-list">
       <li class="empty-message">履歴はまだありません</li>
     </ul>
