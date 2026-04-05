@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "集中モード",
+  "name": "Concentrate On!",
   "version": "1.0.0",
-  "description": "集中モードのON/OFFを切り替え、指定ドメインへのアクセスをブロックします",
+  "description": "集中モードのON/OFFを切り替え、指定ドメインへのアクセスをブロックします。一部のドメインをホワイトリストに登録することも可能です。",
   "permissions": ["storage", "tabs"],
   "background": {
     "service_worker": "background.js"
